@@ -1,9 +1,0 @@
-#web_bg {
-  /* 背景图像的地址（url括号里）  */
-  background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fc28337a4ab59a334ac6b54c22e8a6ad7fed72fe5.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612352989&t=a45e95766fd86840d78e80ef75effd48);
-  /* 背景图像不重复 */
-  background-repeat: no-repeat;
-  /* 背景图像大小 */
-  background-size: 200 kb;
-}
- 
