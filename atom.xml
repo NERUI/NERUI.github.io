@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-07T11:52:04.369Z</updated>
+  <updated>2021-01-07T12:16:25.083Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2021/01/05/%E5%8A%9B%E6%89%A3%E9%A2%98%EF%BC%9A%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"/>
     <id>http://example.com/2021/01/05/%E5%8A%9B%E6%89%A3%E9%A2%98%EF%BC%9A%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
     <published>2021-01-05T11:05:51.000Z</published>
-    <updated>2021-01-07T11:52:04.369Z</updated>
+    <updated>2021-01-07T12:16:25.083Z</updated>
     
-    <content type="html"><![CDATA[<p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。</p><p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p><p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p><p> </p><p>示例 1：</p><p>输入：l1 = [2,4,3], l2 = [5,6,4]<br>输出：[7,0,8]<br>解释：342 + 465 = 807.<br>示例 2：</p><p>输入：l1 = [0], l2 = [0]<br>输出：[0]<br>示例 3：</p><p>输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]<br>输出：[8,9,9,9,0,0,0,1]</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/add-two-numbers">https://leetcode-cn.com/problems/add-two-numbers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><p>代码：<br>    class Solution {<br>    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {<br>        ListNode root = new ListNode(0);<br>        ListNode cursor = root;<br>        int carry = 0;<br>        while(l1 != null || l2 != null || carry != 0) {<br>            int l1Val = l1 != null ? l1.val : 0;<br>            int l2Val = l2 != null ? l2.val : 0;<br>            int sumVal = l1Val + l2Val + carry;<br>            carry = sumVal / 10;<br>            ListNode sumNode = new ListNode(sumVal % 10);<br>            cursor.next = sumNode;<br>            cursor = sumNode;<br>            if(l1 != null) l1 = l1.next;<br>            if(l2 != null) l2 = l2.next;<br>        }<br>        return root.next;<br>    }<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。</p><p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p><p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p><p> </p><p>示例 1：</p><p>输入：l1 = [2,4,3], l2 = [5,6,4]<br>输出：[7,0,8]<br>解释：342 + 465 = 807.<br>示例 2：</p><p>输入：l1 = [0], l2 = [0]<br>输出：[0]<br>示例 3：</p><p>输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]<br>输出：[8,9,9,9,0,0,0,1]</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/add-two-numbers">https://leetcode-cn.com/problems/add-two-numbers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><p>代码：<br>    class Solution {<br>        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {<br>            ListNode root = new ListNode(0);<br>            ListNode cursor = root;<br>            int carry = 0;<br>            while(l1 != null || l2 != null || carry != 0) {<br>                int l1Val = l1 != null ? l1.val : 0;<br>                int l2Val = l2 != null ? l2.val : 0;<br>                int sumVal = l1Val + l2Val + carry;<br>                carry = sumVal / 10;<br>                ListNode sumNode = new ListNode(sumVal % 10);<br>                cursor.next = sumNode;<br>                cursor = sumNode;<br>                if(l1 != null) l1 = l1.next;<br>                if(l2 != null) l2 = l2.next;<br>            }<br>            return root.next;<br>        }<br>    }</p>]]></content>
     
     
       
