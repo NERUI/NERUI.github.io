@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-13T12:34:44.201Z</updated>
+  <updated>2021-01-14T13:58:17.285Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣题 可被5整除的二进制前缀</title>
+    <link href="http://example.com/2021/01/14/%E5%8A%9B%E6%89%A3%E9%A2%98%20%E5%8F%AF%E8%A2%AB5%E6%95%B4%E9%99%A4%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%89%8D%E7%BC%80/"/>
+    <id>http://example.com/2021/01/14/%E5%8A%9B%E6%89%A3%E9%A2%98%20%E5%8F%AF%E8%A2%AB5%E6%95%B4%E9%99%A4%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%89%8D%E7%BC%80/</id>
+    <published>2021-01-14T13:55:27.000Z</published>
+    <updated>2021-01-14T13:58:17.285Z</updated>
+    
+    <content type="html"><![CDATA[<p>给定由若干 0 和 1 组成的数组 A。我们定义 N_i：从 A[0] 到 A[i] 的第 i 个子数组被解释为一个二进制数（从最高有效位到最低有效位）。</p><p>返回布尔值列表 answer，只有当 N_i 可以被 5 整除时，答案 answer[i] 为 true，否则为 false。</p><p> </p><p>示例 1：</p><p>输入：[0,1,1]<br>输出：[true,false,false]<br>解释：<br>输入数字为 0, 01, 011；也就是十进制中的 0, 1, 3 。只有第一个数可以被 5 整除，因此 answer[0] 为真。<br>示例 2：</p><p>输入：[1,1,1]<br>输出：[false,false,false]<br>示例 3：</p><p>输入：[0,1,1,1,1,1]<br>输出：[true,false,false,false,true,false]<br>示例 4：</p><p>输入：[1,1,1,0,1]<br>输出：[false,false,false,false,false] </p><p>提示：</p><p>1 &lt;= A.length &lt;= 30000<br>A[i] 为 0 或 1</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/binary-prefix-divisible-by-5">https://leetcode-cn.com/problems/binary-prefix-divisible-by-5</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><p>下一个二进制前缀对应的十进制整数 = 上一次的结果左移一位（乘以2）的结果 + 这次的A[i]（0或者1，正好对应十进制的0或者1）的结果。</p><p>代码：</p><pre><code>class Solution &#123;    public List&lt;Boolean&gt; prefixesDivBy5(int[] A) &#123;        List&lt;Boolean&gt; ans = new ArrayList&lt;&gt;();        int num = 0;        for (int i = 0;i &lt; A.length;i++) &#123;                num &lt;&lt;= 1;            num += A[i];            num %= 10;            ans.add(num % 5 == 0);        &#125;        return ans;    &#125;&#125;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;给定由若干 0 和 1 组成的数组 A。我们定义 N_i：从 A[0] 到 A[i] 的第 i 个子数组被解释为一个二进制数（从最高有效位到最低有效位）。&lt;/p&gt;
+&lt;p&gt;返回布尔值列表 answer，只有当 N_i 可以被 5 整除时，答案 answer[i] 为 true</summary>
+      
+    
+    
+    
+    <category term="算法题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="每日一题" scheme="http://example.com/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每日一句1.14</title>
+    <link href="http://example.com/2021/01/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A51-14/"/>
+    <id>http://example.com/2021/01/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A51-14/</id>
+    <published>2021-01-14T13:34:43.000Z</published>
+    <updated>2021-01-14T13:38:15.259Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>The definition of the good society is one in which virtue pays.</strong><br>有德的人不会吃亏，可谓之好的社会。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;The definition of the good society is one in which virtue pays.&lt;/strong&gt;&lt;br&gt;有德的人不会吃亏，可谓之好的社会。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="每日一句" scheme="http://example.com/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A5/"/>
+    
+    
+    <category term="英语" scheme="http://example.com/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>‘每日一句1.13</title>
     <link href="http://example.com/2021/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A51-13/"/>
     <id>http://example.com/2021/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A51-13/</id>
     <published>2021-01-13T12:27:49.000Z</published>
-    <updated>2021-01-13T12:34:44.201Z</updated>
+    <updated>2021-01-14T13:37:43.781Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>Standing for right when it is unpopular is a true test of moral character</strong><br>站在不受欢迎但却正确的一边，才是真正的道德考验。</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>Standing for right when it is unpopular is a true test of moral character.</strong><br>站在不受欢迎但却正确的一边，才是真正的道德考验。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Standing for right when it is unpopular is a true test of moral character&lt;/strong&gt;&lt;br&gt;站在不受欢迎但却正确的一边，才是真正的道德考验。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Standing for right when it is unpopular is a true test of moral character.&lt;/strong&gt;&lt;br&gt;站在不受欢迎但却正确的一边，才是真正的道德考验。&lt;/p&gt;
 </summary>
       
     
