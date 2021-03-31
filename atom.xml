@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-30T10:45:43.215Z</updated>
+  <updated>2021-03-31T11:33:35.179Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法题 种花问题</title>
+    <link href="http://example.com/2021/03/31/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2021/03/31/%E7%AE%97%E6%B3%95%E9%A2%98-%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</id>
+    <published>2021-03-31T11:29:38.000Z</published>
+    <updated>2021-03-31T11:33:35.179Z</updated>
+    
+    <content type="html"><![CDATA[<p>假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。</p><p>给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false。</p><p> </p><p>示例 1：</p><p>输入：flowerbed = [1,0,0,0,1], n = 1<br>输出：true<br>示例 2：</p><p>输入：flowerbed = [1,0,0,0,1], n = 2<br>输出：false </p><p>提示：</p><p>1 &lt;= flowerbed.length &lt;= 2 * 104<br>flowerbed[i] 为 0 或 1<br>flowerbed 中不存在相邻的两朵花<br>0 &lt;= n &lt;= flowerbed.length</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/can-place-flowers">https://leetcode-cn.com/problems/can-place-flowers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><pre><code>代码：    class Solution &#123;        public boolean canPlaceFlowers(int[] flowerbed, int n) &#123;        int num = 0,count = 1;  //设置count=1来假设在数组左边添加0，以解决边界问题        for (int i=0;i&lt;flowerbed.length;i++)&#123;            if (flowerbed[i] == 0)&#123;            count++;            &#125;else&#123;                count = 0;            &#125;            if (count == 3)&#123;    //每连续三个0种一次花                num++;                count = 1;        //如果三个0后跟的还是0的话，两个0就可以种一次花            &#125;        &#125;        if (count == 2)&#123;    //如果最后count为2而不是1，表示最后一个位置可以种花            num++;        &#125;        return n &lt;= num;    &#125;&#125;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。&lt;/p&gt;
+&lt;p&gt;给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能</summary>
+      
+    
+    
+    
+    <category term="算法题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="每日一题" scheme="http://example.com/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>算法题 搜索二维矩阵</title>
