@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-31T11:33:35.179Z</updated>
+  <updated>2021-04-07T09:36:29.020Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法题 分隔链表</title>
+    <link href="http://example.com/2021/04/07/%E7%AE%97%E6%B3%95%E9%A2%98-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/"/>
+    <id>http://example.com/2021/04/07/%E7%AE%97%E6%B3%95%E9%A2%98-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/</id>
+    <published>2021-04-07T09:33:52.000Z</published>
+    <updated>2021-04-07T09:36:29.020Z</updated>
+    
+    <content type="html"><![CDATA[<p>给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。</p><p>你应当 保留 两个分区中每个节点的初始相对位置。</p><p> </p><p>示例 1：</p><p>输入：head = [1,4,3,2,5,2], x = 3<br>输出：[1,2,2,4,3,5]<br>示例 2：</p><p>输入：head = [2,1], x = 2<br>输出：[1,2] </p><p>提示：</p><p>链表中节点的数目在范围 [0, 200] 内<br>-100 &lt;= Node.val &lt;= 100<br>-200 &lt;= x &lt;= 200</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/partition-list">https://leetcode-cn.com/problems/partition-list</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><p>代码：    </p><pre><code>/** * Definition for singly-linked list. * public class ListNode &#123; *     int val; *     ListNode next; *     ListNode() &#123;&#125; *     ListNode(int val) &#123; this.val = val; &#125; *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125; * &#125; */class Solution &#123;    public ListNode partition(ListNode head, int x) &#123;        ListNode dummyHead1 = new ListNode(0);        ListNode dummyHead2 = new ListNode(0);        ListNode node1 = dummyHead1;        ListNode node2 = dummyHead2;        while (head != null) &#123;            if (head.val &lt; x) &#123;                node1.next = head;                head = head.next;                node1 = node1.next;                node1.next = null;            &#125; else &#123;                node2.next = head;                head = head.next;                node2 = node2.next;                node2.next = null;            &#125;        &#125;        node1.next = dummyHead2.next;        return dummyHead1.next;    &#125;&#125;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。&lt;/p&gt;
+&lt;p&gt;你应当 保留 两个分区中每个节点的初始相对位置。&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;p&gt;输入：head</summary>
+      
+    
+    
+    
+    <category term="算法题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    
+    <category term="每日一题" scheme="http://example.com/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>算法题 种花问题</title>
